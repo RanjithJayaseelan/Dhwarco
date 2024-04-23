@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/assests/icons/fav.ico" sizes="16x16" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madras Coworks - Details</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="canonical" href="https://www.madrascoworks.com/" />
+    <link rel="alternate" href="https://www.madrascoworks.com/" hreflang="en" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&Sora:wght@700&Oswald:wght@600display=swap"
+      rel="stylesheet"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8B8QHV8PXV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-8B8QHV8PXV");
+    </script>
+  </head>
+
+  <body onload="loading()">
+    <div class="loader_holder">
+      <div class="loader_cover">
+        <div class="loader_shadow"></div>
+        <div class="loader"></div>
+      </div>
+    </div>
+    <!-- responsive Mobile left slider  -->
+    <div id="toggle-left" class="left-shadow">
+      <div class="left_content_cover">
+        <div class="footer_right">
+          <div class="footer-redirect">
+            <a class="sora_weight400" onclick="footerRedirect('meeting_room')"
+              ><i class="fa fa-home"></i>Meeting Room</a
+            >
+          </div>
+          <div class="footer-redirect">
+            <a class="sora_weight400" onclick="footerRedirect('private_office')"
+              ><i class="fa fa-black-tie"></i>Private Office</a
+            >
+          </div>
+          <div class="footer-redirect">
+            <a class="sora_weight400" onclick="footerRedirect('coworking_desk')"
+              ><i class="fa fa-suitcase"></i>Co-Working Space</a
+            >
+          </div>
+          <div class="footer-redirect">
+            <a class="sora_weight400" onclick="footerRedirect('day_passes')"
+              ><i class="fa fa-hourglass-start"></i>Day Pass</a
+            >
+          </div>
+          <div class="footer-redirect">
+            <a class="sora_weight400" onclick="footerRedirect('virtual_office')"
+              ><i class="fa fa-archive"></i>Virtual Office</a
+            >
+          </div>
+          <div class="footer-redirect">
+            <a
+              class="sora_weight400"
+              onclick="footerRedirect('serviced_office')"
+              ><i class="fa fa-check-square-o"></i>Serviced Office Space</a
+            >
+          </div>
+          <div class="footer-redirect">
+            <a
+              class="sora_weight400"
+              onclick="footerRedirect('enterprise_solution')"
+              ><i class="fa fa-cube"></i>Enterprise Solutions</a
+            >
+          </div>
+          <div class="footer-redirect">
+            <a class="sora_weight400" onclick="aboutRedirect()"
+              ><i class="fa fa-suitcase"></i>About Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div onclick="hamburgerFunction()" id="blur" class="right-shadow"></div>
+    <!--End of responsive Mobile left slider  -->
+
+    <!-- responsive Mobile Footer -->
+    <div class="responsive_footer_cover">
+      <div class="responsive_footer">
+        <div class="responsive_icon_holder">
+          <a
+            href="mailto:info@madrascoworks.com"
+            style="text-decoration: none; cursor: pointer"
+            ><img class="message_box" src="/assests/icons/MessageResponsive.svg"
+          /></a>
+        </div>
+        <div class="responsive_icon_holder">
+          <a
+            href="tel:+91-9840099046"
+            style="text-decoration: none; cursor: pointer"
+            ><img class="message_box" src="/assests/icons/CallResponsive.svg"
+          /></a>
+        </div>
+        <div class="responsive_icon_holder">
+          <a href="https://wa.me/919840099046" target="_blank"
+            ><i class="fa fa-whatsapp whatsapp"> </i
+          ></a>
+        </div>
+        <!-- <div class="responsive_icon_holder"><i class="fa fa-phone"> </i></div>
+      <div class="responsive_icon_holder"><i class="fa fa-phone"> </i></div> -->
+      </div>
+    </div>
+    <!--End of responsive Mobile Footer -->
+
+    <!-- Pop-Up-Form -->
+    <div class="background_cover" id="background">
+      <div class="shadow" id="pop_up_cover" onclick="closePopUp()"></div>
+      <div class="join_us_form" id="join_us_form">
+        <i class="fa fa-close" onclick="closePopUp()"></i>
+        <h2 class="sora_weight700 heading_color" id="form_header">Join Us</h2>
+        <div class="form_input_box">
+          <div class="join_us_input_box">
+            <img class="join_us_icon" src="/assests/icons/Profile.svg" />
+            <input
+              class="join_us_input"
+              id="name"
+              pattern="[a-zA-Z ]"
+              type="text"
+              placeholder="Your Name"
+            />
+            <span id="nameError" class="hide_error"
+              >Please enter a valid Name</span
+            >
+          </div>
+          <div class="join_us_input_box">
+            <img class="join_us_icon" src="/assests/icons/Call.svg" />
+            <input
+              class="join_us_input"
+              id="number"
+              type="text"
+              placeholder="Phone Number"
+            />
+            <span id="numberError" class="hide_error"
+              >Please enter a valid Number</span
+            >
+          </div>
+          <div class="join_us_input_box">
+            <img class="join_us_icon" src="/assests/icons/Messageform.svg" />
+            <input
+              class="join_us_input"
+              id="email"
+              type="text"
+              placeholder="Email Address"
+            />
+            <span id="emailError" class="hide_error"
+              >Please enter a valid email</span
+            >
+          </div>
+          <div class="join_us_input_box" id="working_space">
+            <img class="join_us_icon" src="/assests/icons/Messageform.svg" />
+            <select class="join_us_input select" id="woking_space_type">
+              <option value="">I'm interested in</option>
+              <option value="private_office">Private Office</option>
+              <option value="coworking_desk">Coworking Desk</option>
+              <option value="virtual_office">Virtual Office</option>
+              <option value="meeting_room">Meeting Room</option>
+              <option value="day_pass">Day Pass</option>
+            </select>
+            <span id="working_space_error" class="hide_error"
+              >Please select a Workspace</span
+            >
+          </div>
+          <div class="join_us_input_box" id="spaces">
+            <img class="join_us_icon" src="/assests/icons/Home.svg" />
+            <select class="join_us_input select" id="space">
+              <option value="">Spaces looking for</option>
+              <option value="space">Space</option>
+            </select>
+            <span id="spaceError" class="hide_error"
+              >Please select a valid Workplace</span
+            >
+          </div>
+          <div class="join_us_input_box" id="location">
+            <img class="join_us_icon" src="/assests/icons/Path_33958.svg" />
+            <select class="join_us_input select" id="locate">
+              <option value="">location</option>
+              <option value="chennai">Chennai</option>
+            </select>
+            <span id="locationError" class="hide_error"
+              >Please select a valid Location</span
+            >
+          </div>
+          <div class="join_us_input_box" id="seaters">
+            <img class="join_us_icon" src="/assests/icons/Messageform.svg" />
+            <input
+              class="join_us_input"
+              type="text"
+              id="seat_value"
+              placeholder="enter the no of seaters"
+            />
+            <span id="seaterError" class="hide_error"
+              >Please enter a valid seater number</span
+            >
+          </div>
+          <div class="join_us_input_box" id="area">
+            <img class="join_us_icon" src="/assests/icons/Path_33958.svg" />
+            <select class="join_us_input select" type="text" id="area_value">
+              <option value="">area</option>
+              <option value="chennai">Chennai</option>
+            </select>
+            <span id="areaError" class="hide_error"
+              >Please select a valid Area</span
+            >
+          </div>
+        </div>
+        <div class="form_submit" id="form_submit"><button>Submit</button></div>
+        <span id="successMessage"></span>
+      </div>
+    </div>
+    <!-- End of Pop-Up-Form -->
+
+    <!-- Nav Bar  -->
+    <div class="nav_bar detailpage_navBar">
+      <div class="logo_container">
+        <img src="/assests/icons/logo.svg" alt="" onclick="redirect()" />
+      </div>
+      <div class="image_right_content_cover">
+        <ul class="navbar-nav">
+          <li class="sora_weight600 nav-item detail_nav_item">
+            <a class="nav-link detail_nav_link" onclick="redirect()"
+              >Find Your Workplace</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="sora_weight400 nav-item detail_nav_item">
+            <a class="nav-link detail_nav_link" onclick="PopUp('join')"
+              >Join Us</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="sora_weight400 nav-item detail_nav_item">
+            <a class="nav-link nav_bar_link1" onclick="aboutRedirect()"
+              >About Us</a
+            >
+          </li>
+        </ul>
+        <div class="contact_info">
+          <div class="d-flex-row" style="margin-bottom: 3px">
+            <i class="fa fa-phone"> </i>
+            <a
+              href="tel:+91-9840099046"
+              class="phone_number sora_weight600"
+              style="text-decoration: none; cursor: pointer"
+              >+91 9840099046</a
+            >
+          </div>
+          <div class="d-flex-row">
+            <img class="message_box" src="/assests/icons/Message.svg" />
+            <a
+              href="mailto:info@madrascoworks.com"
+              class="phone_number sora_weight600"
+              style="text-decoration: none; cursor: pointer"
+              >info@madrascoworks.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of  Nav Bar  -->
+
+    <!-- Responsive_nav_bar -->
+    <div class="responsive_nav_bar">
+      <div class="nav_bar">
+        <div class="logo_container">
+          <img src="/assests/icons/logo.svg" alt="" onclick="redirect()" />
+        </div>
+        <div class="image_right_content_cover">
+          <ul class="navbar-nav">
+            <li class="sora_weight400 nav-item detail_nav_item">
+              <a class="nav-link detail_nav_link" onclick="PopUp('join')"
+                >Join Us</a
+              >
+            </li>
+          </ul>
+          <button class="get_quote_button" onclick="PopUp('quote')">
+            Get Quote
+          </button>
+          <i
+            class="fa fa-align-justify ham-burger"
+            onclick="hamburgerFunction()"
+            id="hamburger"
+          ></i>
+        </div>
+      </div>
+    </div>
+    <!--End of Responsive_nav_bar -->
+
+    <div>
+      <div class="fixed_width_wrapper">
+        <div class="detail_content">
+          <h2
+            class="sora_weight600 heading_color font_32"
+            id="detail_header"
+          ></h2>
+          <p class="content_color font_20 mb_20" id="detail_subtext"></p>
+
+          <!-- Detail-page-slider -->
+          <div class="detail_image">
+            <div class="big-image-holder">
+              <button class="big_image_left_icon">
+                <img src="/assests/icons/Left.svg" />
+              </button>
+              <button class="big_image_right_icon">
+                <img src="/assests/icons/Right.svg" />
+              </button>
+              <div class="big-image"></div>
+            </div>
+            <!-- <div
+              class="small-image portfolio-slides"
+              id="small_imageholder"
+              style="display: none;"
+            ></div> -->
+          </div>
+          <!--End of  Detail-page-slider -->
+
+          <div class="form_container">
+            <ul class="content_color detail_li" id="li_details"></ul>
+            <!-- <div class="timing_cover mb_20">
+              <div class="timing_container" id="box"></div>
+            </div> -->
+            <!-- Detail-page-form -->
+            <div class="book_now" id="book_now">
+              <div class="form_holder" id="form_holder">
+                <h2
+                  class="sora_weight700 heading_color"
+                  id="detail_form_header"
+                ></h2>
+                <div>
+                  <div class="input_box">
+                    <h4>Full Name</h4>
+                    <img class="form_call" src="/assests/icons/Profile.svg" />
+                    <input
+                      type="text"
+                      placeholder="Your Name"
+                      id="detailName"
+                    />
+                    <span id="detailNameError" class="hide_error"
+                      >Please enter a valid Name</span
+                    >
+                  </div>
+                  <div class="input_box">
+                    <h4>Phone Number</h4>
+                    <img class="form_call" src="/assests/icons/Call.svg" />
+                    <input
+                      type="text"
+                      placeholder="Phone Number"
+                      id="detailNumber"
+                    />
+                    <span id="detailNumberError" class="hide_error"
+                      >Please enter a valid number</span
+                    >
+                  </div>
+                  <div class="input_box">
+                    <h4>Email Address</h4>
+                    <img
+                      class="form_call"
+                      src="/assests/icons/Messageform.svg"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Email Address"
+                      id="detailEmail"
+                    />
+                    <span id="detailEmailError" class="hide_error"
+                      >Please enter a valid email</span
+                    >
+                  </div>
+                  <div class="input_date_box">
+                    <h4>Capacity</h4>
+                    <input
+                      type="text"
+                      placeholder="6 peoples"
+                      id="detailCapacity"
+                    />
+                    <span id="capacityError" class="hide_error"
+                      >Please enter the no of capacity</span
+                    >
+                  </div>
+                  <div class="input_date_box" id="detailDateBox">
+                    <h4>Date</h4>
+                    <input
+                      type="datetime-local"
+                      placeholder="Select your Date"
+                      id="detailDate"
+                    />
+                    <span id="dateError" class="hide_error"
+                      >Please enter a valid date</span
+                    >
+                  </div>
+                  <div class="input_date_timer" id="detailTimeBox">
+                    <div style="margin-right: 10px">
+                      <h4>Start Time</h4>
+                      <input
+                        type="datetime-local"
+                        placeholder="Select your Date"
+                        id="detailStart"
+                      />
+                      <span id="detailStartError" class="hide_error"
+                        >Please enter a valid start date</span
+                      >
+                    </div>
+                    <div>
+                      <h4>End Time</h4>
+                      <input
+                        type="datetime-local"
+                        placeholder="Select your Date"
+                        id="detailEnd"
+                      />
+                      <span id="detailEndError" class="hide_error"
+                        >Please enter a valid end date</span
+                      >
+                    </div>
+                  </div>
+                  <div class="form_submit">
+                    <button onclick="detailSubmit()">Submit</button>
+                  </div>
+                  <span id="detail_successMessage"></span>
+                </div>
+              </div>
+            </div>
+            <!--end of Detail-page-form -->
+          </div>
+        </div>
+      </div>
+      <!-- Responsive Detail-page-form -->
+      <div class="responsive_form_holder" id="form_holder">
+        <h2
+          class="sora_weight700 heading_color"
+          id="responsive_detail_form_header"
+        ></h2>
+        <div>
+          <div class="input_box">
+            <h4>Full Name</h4>
+            <img class="form_call" src="/assests/icons/Profile.svg" />
+            <input type="text" placeholder="Your Name" id="res_name" />
+            <span id="res_NameError" class="hide_error"
+              >Please enter a valid Name</span
+            >
+          </div>
+          <div class="input_box">
+            <h4>Phone Number</h4>
+            <img class="form_call" src="/assests/icons/Call.svg" />
+            <input type="text" placeholder="Phone Number" id="res_number" />
+            <span id="res_NumberError" class="hide_error"
+              >Please enter a valid number</span
+            >
+          </div>
+          <div class="input_box">
+            <h4>Email Address</h4>
+            <img class="form_call" src="/assests/icons/Messageform.svg" />
+            <input type="text" placeholder="Email Address" id="res_email" />
+            <span id="res_EmailError" class="hide_error"
+              >Please enter a valid email</span
+            >
+          </div>
+          <div class="input_date_box">
+            <h4>Capacity</h4>
+            <input type="text" placeholder="6 peoples" id="res_capacity" />
+            <span id="res_capacityError" class="hide_error"
+              >Please enter the no of capacity</span
+            >
+          </div>
+          <div class="input_date_box" id="responsive_detailDateBox">
+            <h4>Date</h4>
+            <input
+              type="datetime-local"
+              placeholder="Select your Date"
+              id="res_Date"
+            />
+            <span id="res_dateError" class="hide_error"
+              >Please enter a valid date</span
+            >
+          </div>
+          <div class="input_date_timer" id="responsive_detailTimeBox">
+            <div style="margin-right: 10px">
+              <h4>Start Time</h4>
+              <input
+                type="datetime-local"
+                placeholder="Select your Date"
+                id="res_Start"
+              />
+              <span id="res_StartError" class="hide_error"
+                >Please enter a valid start date</span
+              >
+            </div>
+            <div>
+              <h4>End Time</h4>
+              <input
+                type="datetime-local"
+                placeholder="Select your Date"
+                id="res_End"
+              />
+              <span id="res_EndError" class="hide_error"
+                >Please enter a valid end date</span
+              >
+            </div>
+          </div>
+          <div class="form_submit" id="detail_submit">
+            <button onclick="responsiveFormSubmit()">Submit</button>
+          </div>
+          <span id="responsive_successMessage"></span>
+        </div>
+      </div>
+      <!-- Responsive Detail-page-form -->
+
+      <!-- slides -->
+      <!-- <div class="slides_cover detail_slide_cover">
+        <h2>Recommended Office Space near you</h2>
+        <button class="left-icon"><img src="/assests/icons/Left.svg" /></button>
+        <button class="right-icon">
+          <img src="/assests/icons/Right.svg" />
+        </button>
+
+        <div
+          class="carousel slide_container main_slide"
+          id="slide_content"
+        ></div>
+      </div> -->
+      <!--end of  slides -->
+
+      <!-- Explore -->
+      <div class="explore_cover detail_explore_cover">
+        <h2 class="underLine">Explore near you</h2>
+        <div class="explore_content d_flex_wrap" id="city_container"></div>
+      </div>
+      <!--end of  Explore -->
+
+      <!-- Amenities -->
+      <div class="amenities_cover">
+        <h2 class="underLine">Our Amenities</h2>
+        <div class="amenities_container">
+          <div class="fl_col_center">
+            <img src="/assests/icons/24-hours (1) 1.svg" />
+            <span class="sora_weight600">24/7 access</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/handshake (1) 1.svg" />
+            <span class="sora_weight600">IT Support</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/wifi (1) 1.svg" />
+            <span class="sora_weight600">Wifi</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/lan 1.svg" />
+            <span class="sora_weight600">LAN</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/documents (1) 1.svg" />
+            <span class="sora_weight600">Documentation</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/meeting-room 1.svg" />
+            <span class="sora_weight600">Meeting Rooms</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/energy 1.svg" />
+            <span class="sora_weight600">UPS Backups</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/counter 1.svg" />
+            <span class="sora_weight600">Front Desk</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/credit-cards 1.svg" />
+            <span class="sora_weight600">Access Card</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/armchair 1.svg" />
+            <span class="sora_weight600">Furnishing</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/coffee 1.svg" />
+            <span class="sora_weight600">Tea/Coffee</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/dining-table-with-chairs 1.svg" />
+            <span class="sora_weight600">Dining</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/maintenance 1.svg" />
+            <span class="sora_weight600">Maintenance</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/mop 1.svg" />
+            <span class="sora_weight600">House Keeping</span>
+          </div>
+          <div class="fl_col_center">
+            <img src="/assests/icons/parking 1.svg" />
+            <span class="sora_weight600">Parking</span>
+          </div>
+        </div>
+      </div>
+
+      <!--End of  Amenities -->
+
+      <!-- Footer  -->
+      <div class="footer_cover">
+        <div class="footer_background">
+          <div class="footer_container">
+            <div class="footer_left">
+              <img src="/assests/icons/logo.svg" onclick="redirect()" />
+              <div class="mb_20">
+                <p class="sora_weight600">Call us on</p>
+                <a
+                  class="sora_weight600"
+                  href="tel:+91-9840099046"
+                  style="text-decoration: none; cursor: pointer"
+                  >+91 9840099046</a
+                >
+              </div>
+              <div>
+                <p class="sora_weight600">Mail us on</p>
+                <p>
+                  <a
+                    class="sora_weight600 footer_mail"
+                    href="mailto:info@madrascoworks.com"
+                    style="text-decoration: none; cursor: pointer"
+                    >info@madrascoworks.com</a
+                  >
+                </p>
+              </div>
+              <div>
+                <p
+                  class="sora_weight600"
+                  style="cursor: pointer"
+                  onclick="aboutRedirect()"
+                >
+                  About Us
+                </p>
+              </div>
+              <div class="mb_20 mt_50">
+                <h2 class="sora_weight600">Follow us on</h2>
+                <div class="fl_row footer_icons">
+                  <img title="Indeed" src="/assests/icons/indeed.svg" />
+                  <img title="Twitter" src="/assests/icons/tw.svg" />
+                  <img title="FaceBook" src="/assests/icons/fb.svg" />
+                  <a href="https://wa.me/919840099046" target="_blank"
+                    ><img
+                      title="WhatsApp"
+                      class="whatsapp"
+                      src="/assests/icons/whatsapp.svg"
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="footer_right">
+              <div class="footer-redirect">
+                <a
+                  class="sora_weight400"
+                  onclick="footerRedirect('meeting_room')"
+                  ><i class="fa fa-home"></i>Meeting Room</a
+                >
+              </div>
+              <div class="footer-redirect">
+                <a
+                  class="sora_weight400"
+                  onclick="footerRedirect('private_office')"
+                  ><i class="fa fa-black-tie"></i>Private Office</a
+                >
+              </div>
+              <div class="footer-redirect">
+                <a
+                  class="sora_weight400"
+                  onclick="footerRedirect('coworking_desk')"
+                  ><i class="fa fa-suitcase"></i>Co-Working Space</a
+                >
+              </div>
+              <div class="footer-redirect">
+                <a class="sora_weight400" onclick="footerRedirect('day_passes')"
+                  ><i class="fa fa-hourglass-start"></i>Day Pass</a
+                >
+              </div>
+              <div class="footer-redirect">
+                <a
+                  class="sora_weight400"
+                  onclick="footerRedirect('virtual_office')"
+                  ><i class="fa fa-archive"></i>Virtual Office</a
+                >
+              </div>
+              <div class="footer-redirect">
+                <a
+                  class="sora_weight400"
+                  onclick="footerRedirect('serviced_office')"
+                  ><i class="fa fa-check-square-o"></i>Serviced Office Space</a
+                >
+              </div>
+              <div class="footer-redirect">
+                <a
+                  class="sora_weight400"
+                  onclick="footerRedirect('customized_office')"
+                  ><i class="fa fa-cube"></i>Customized Office</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End of  Footer  -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.js"></script>
+    <script src="https://mreq.github.io/slick-lightbox/dist/slick-lightbox.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://mreq.github.io/slick-lightbox/dist/slick-lightbox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://mreq.github.io/slick-lightbox/gh-pages/bower_components/slick-carousel/slick/slick-theme.css"
+    />
+    <script src="/js/functions.js"></script>
+    <script src="/js/datafetching.js"></script>
+    <script src="/js/functionality.js"></script>
+  </body>
+</html>

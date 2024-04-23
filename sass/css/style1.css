@@ -1,0 +1,125 @@
+/*App Content Page   */
+
+.tec-text h1{
+	font-size:60px;
+	padding:110px 0 110px 0;
+	color:#fff; 
+  font-weight: 500;
+	
+}
+.tec-section{
+	background-image:url(../images/tech-img.png);
+	background-color:rgb(14, 35, 7);
+}
+
+.mobile-text h3 {
+    /* color: #5f9ea0; */
+    color: rgb(0 46 93);
+    font-family: var(--font-begum), serif;
+  }
+  ile-section {
+      padding: 25px 0px 25px 0px;
+  }
+  
+  
+  .mobile-features-section {
+      padding: 10px 0 10px 0;
+  }
+  .sub-title {
+      padding: 10px 0 10px 0;
+        line-height: 25px;
+  }
+  .app{
+    padding-left:10px;
+  }
+  
+  .mobile-features-section h3 {
+      font-size: 39px;
+      color: #002a5d;
+  }
+  button.btn.btn-defultdropdown-toggledropdown-toggle {
+      border: none;
+      font-size: 22px;
+      background: none;
+  }
+  
+/* App Content Page End here */
+
+  .app-text  {
+    margin-bottom: 20px;
+    padding-top: 66px;
+  }
+  .app-text h3 {
+    font-weight: bold;
+    text-align: auto;
+  }
+  
+  .app-text p {
+    text-align: justify;
+  }  
+  
+  .app-images {
+    padding: 10px;
+    margin-top: 50px;
+  }
+  
+  .app-img img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* App - Section starts here */
+  
+  .app-section {
+    padding: 20px;
+  }
+  
+  .app-section h3,
+  {
+    
+        margin-top: 10px;
+        margin-bottom: 10px;
+    
+  }
+  .app-section h4,
+  {
+    {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+  }
+  .app-section p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .app-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  .app-d-tex
+  {
+    margin-top:50px;
+  }
+
+  /* App- Section Code ends here . 
+
+  /* Pre Loader Function code starts here  */
+
+  .loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* You can change the background color if needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensure the loader is on top of other elements */
+}
+
+.loader img {
+  width: 500px; /* Adjust the width of your logo */
+  height: auto; /* Maintain aspect ratio */
+}

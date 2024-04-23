@@ -1,0 +1,210 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Dhwarco</title>
+   <link rel="stylesheet" type="text/css" href="sass/css/style.css">
+   <link rel="icon" href="images/fav_icon.png" type="image/x-icon">
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body style="background-image: none;">
+   <div class="fullcontent">
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="myScrollspy" style="background-color:#fff !important;">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <span class="navbar-brand"><img src="images/logo.png" alt="logo"></span>
+               <a type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+               </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a class="active" href="index.html">Home</a></li>
+                  <li><a href="index.html#service">Service </a></li>
+                  <li><a href="" data-toggle="modal" data-target="#myModal">Join Us</a></li>
+                  <li><a href="index.html#aboutus">About Us</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="tel:+91 99449 77439" class="header-phone" style="text-transform: none;font-weight:bold;"><i style='font-size:12px;color:#444' class='fas'>&#xf879;</i> +91 99449 77439 <br>
+                     <i style='font-size:12px;color:#444' class='fas'>&#xf0e0;</i> info@dhwarco.com</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <!--contact popup-->
+      <div id="myModal" class="modal fade" role="dialog">
+         <div class="content-contact ">
+            <img class="cancel" id="cancel" src="images/icon/cancel.png" alt="cancel" data-dismiss="modal">
+
+            <div class="vacant1">
+               <div class="col-md-12 vacant-selecion">
+                  <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+
+                     <select id="company" name="office" class="office">
+                        <option  id="company" value="" disabled selected hidden>I'm interested in </option>
+                        <option  id="company" value="Private_office">Private Office</option>
+                        <option  id="company" value="Dedicated_desk">Dedicated Desk</option>
+                        <option  id="company" value="Coworking_desk">Coworking Desk</option>
+                        <option  id="company" value="Virtual_office">Virtual Office</option>
+                     </select>
+                  </div>
+               </div>
+            </div>
+            <div class="user-details">
+               <div class="input-container">
+                  <img src="images/icon/name.png" alt="">
+                  <input class="input-field" type="text" placeholder="Name" name="name" id="name" required>
+               </div>
+            </div>
+            <div class="user-details">
+               <div class="input-container">
+                  <img src="images/icon/email.png" alt="">
+                  <input class="input-field" type="email" placeholder="Email-ID" name="email" id="email" required>
+               </div>
+            </div>
+            <div class="user-details">
+               <div class="input-container">
+                  <img src="images/icon/call.png" alt="">
+                  <input class="input-field" type="text" placeholder="Phone Number" name="phone" id="phone" required>
+               </div>
+            </div>
+            <div class="user-details">
+               <div class="input-container">
+                  <img src="images/footer/location1.png" alt="">
+                  <select class="input-field" id="location-place" required>
+                     <option id="location-place" value="" disabled selected hidden>Choose your location</option>
+                     <option id="location-place" value="Guindy">Guindy</option>
+                     <option id="location-place" value="AshokNagar">Ashok Nagar</option>
+                  </select>
+               </div>
+            </div>
+            <div class="submit"><button id='submit-newbtn'>Submit</button></div>
+         </div>
+
+      </div>
+   </div>
+   <!--contact details-->
+   <div class="container-fluid" style="padding:0;">
+      <div class="col-md-12">
+         <div class="col-md-8 col-sm-8 col-xs-12" style="background-color:#fab700;padding-bottom:50px;">
+            <div class="schedule-content location-map-ft">
+               <!-- <img src="images/logo_black.png"> -->
+               <div class="schedule-heading">
+                  <h2>Schedule a visit</h2>
+               </div>
+               <div class="schedule-info">
+                  <p>We're here to help and answer any questions you might have.</p>
+                  <p>We look forward to hearing from you.</p>
+               </div>
+               <div class="schedule-form">
+
+                  <div class="col-md-12">
+                     <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input class="input-field" type="text" placeholder="Name" name="name" id="name-sch" required>
+                     </div>
+                     <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input class="input-field" type="text" placeholder="Company" name="company" id="company-sch"
+                           required>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input class="input-field" type="email" placeholder="Email" name="email" id="email-sch" required>
+                     </div>
+                     <div class="col-md-6 col-sm-6 col-xs-12">
+                        <input class="input-field" type="text" placeholder="Mobile Number" name="phone" id="phone-sch"
+                           required>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select class="input-field" id="location-sch" required>
+                           <option id="location-sch" value="" disabled selected hidden>Choose your location</option>
+                           <option id="location-sch" value="Guindy">Guindy</option>
+                           <option id="location-sch" value="AshokNagar">Ashok Nagar</option>
+                        </select>
+                     </div>
+                     <div class="col-md-6 col-sm-6 col-xs-12"></div>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12">
+                     <div class="submit"><button id='submit-schbtn'>Submit</button></div>
+                     <div id="submission" style="display:none;">Successfully Submitted! We will contact you soon....</div>
+                     <div id="error" style="display:none;"> Not submitted!! please try again or Mail us (info@dhwarco.com)</div>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+         <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+
+            <div class="getintouch-content location-map-lt ">
+               <img src="images/logo.png">
+               <div class="getintouch-heading">
+                  <h2>Get in touch</h2>
+               </div>
+               <div class="getintouch-queries">
+                  <p>For any queries. call us</p>
+                  <a href="tel:+91 99449 77439"><i style='font-size:16px' class='fas'>&#xf879;</i> +91 99449 77439</a>
+               </div>
+               <div class="getintouch-mail">
+                  <p>or drop us an email</p>
+                  <a href="mailto:info@dhwarco.com"><i style='font-size:16px' class='fas'>&#xf0e0;</i>
+                     info@dhwarco.com</a>
+               </div>
+               <div class="getintouch-location">
+                  <a href="#Location"> <span>Get Location</span></a>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-12 container-fluid text-center loc-map" id="Location">
+      <div class="col-md-4 col-sm-4 col-xs-12 loc-map-i">
+         <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4712.683534364093!2d80.19811601887984!3d13.016112529805108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267801f5a6195%3A0xd0bb9c330de8c24f!2sDhwarco%20Business%20Centre!5e0!3m2!1sen!2sin!4v1573558176606!5m2!1sen!2sin"
+            width="100%" height="350px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+         <div class="iframe-address">
+            <h4>Guindy</h4>
+            <p>12C/1, 3rd Cross Street, South Phase Industrial Estate, Guindy, Chennai,
+               Tamil Nadu 600032</p>
+         </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 loc-map-i">
+         <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.094996806647!2d80.20674891467833!3d13.02962219081785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52676f9e021693%3A0xc32f3117f7ab935a!2sDHWARCO%20CO-WORKING%20ASHOK%20NAGAR!5e0!3m2!1sen!2sin!4v1573558372717!5m2!1sen!2sin"
+            width="100%" height="350px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+         <div class="iframe-address">
+            <h4>Ashok Nagar</h4>
+            <p>95, Inner Ring Road, Kasi Estate, Ashok Nagar, Chennai, Tamil Nadu
+               600083</p>
+         </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 loc-map-i">
+         <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3619900706203!2d80.19957140303471!3d13.01260494915403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52673296b6f14f%3A0x9ba8858a9da53f74!2sDhwarco%20Coworking%20-%20Chennai!5e0!3m2!1sen!2sin!4v1582546535894!5m2!1sen!2sin"
+            width="100%" height="350px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+         <div class="iframe-address">
+            <h4>Guindy</h4>
+            <p> No.21-B, 5th Cross St, South Phase, Thiru Vi Ka Industrial Estate, Guindy, Chennai, Tamil Nadu 600032
+            </p>
+         </div>
+      </div>
+   </div>
+   <script src="js/style.js"></script>
+   <script src="js/form_submit.js"></script>
+   <script src="js/schedule_submit.js"></script>
+
+</body>
+</html>
